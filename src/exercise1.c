@@ -2,19 +2,19 @@
 
 int main(int argc, char** argv) {
     
-    float array[10];
+    double array[10];
 
     for(int i = 0; i < 10; i++){
-        scanf("%f", &array[i]);
+        scanf("%lf", &array[i]);
     }
 
-    float sum = 0;
+    double sum = 0;
 
     for(int i = 0; i < 10; i++){
         sum += array[i];
     }
 
-    float aver = sum/10;
+    double aver = sum/10;
 
-    printf("%.2f\n", aver);
+    printf("%.2lf\n", aver);
 }
