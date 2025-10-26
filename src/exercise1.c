@@ -18,5 +18,5 @@ int main(int argc, char** argv) {
 
     float aver = sum/10;
 
-    printf("Среднее арифметическое равно = %.2f\n", aver);
+    printf("%.2f\n", aver);
 }
