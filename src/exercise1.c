@@ -1,20 +1,24 @@
 #include <stdio.h>
 
-int main(int argc, char** argv) {
-    
+int main() {
     double array[10];
-
+    
     for(int i = 0; i < 10; i++){
         scanf("%lf", &array[i]);
     }
 
-    double sum = 0;
-
+    long long sum_cents = 0;
     for(int i = 0; i < 10; i++){
-        sum += array[i];
+        
+        sum_cents += (long long)(array[i] * 100 + 0.5);
     }
-
-    double aver = sum/10;
-
-    printf("%.2lf\n", aver);
+    
+  
+    long long aver_cents = (sum_cents + 5) / 10; 
+    
+    
+    double result = aver_cents / 100.0;
+    
+    printf("%.2lf\n", result);
+    return 0;
 }
