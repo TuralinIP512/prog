@@ -18,10 +18,12 @@ int main() {
     }
     
     long long aver_cents;
+    long long remainder = sum_cents % 10;
+    
     if (sum_cents >= 0) {
-        aver_cents = (sum_cents + 5) / 10;
+        aver_cents = (sum_cents + (remainder >= 5 ? 5 : 0)) / 10;
     } else {
-        aver_cents = (sum_cents - 5) / 10;
+        aver_cents = (sum_cents + (remainder <= -5 ? -5 : 0)) / 10;
     }
     
     double result = aver_cents / 100.0;
