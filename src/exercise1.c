@@ -7,27 +7,15 @@ int main() {
         scanf("%lf", &array[i]);
     }
 
-    long long sum_cents = 0;
+    double sum = 0;
     for(int i = 0; i < 10; i++){
-        double value = array[i] * 100;
-        if (value >= 0) {
-            sum_cents += (long long)(value + 0.5);
-        } else {
-            sum_cents += (long long)(value - 0.5);
-        }
+        sum += array[i];
     }
     
-    long long aver_cents;
-    long long remainder = sum_cents % 10;
+   
+    double aver = sum / 10;
     
-    if (sum_cents >= 0) {
-        aver_cents = (sum_cents + (remainder >= 5 ? 5 : 0)) / 10;
-    } else {
-        aver_cents = (sum_cents + (remainder <= -5 ? -5 : 0)) / 10;
-    }
+    printf("%.3lf\n", aver);
     
-    double result = aver_cents / 100.0;
-    
-    printf("%.2lf\n", result);
     return 0;
 }
